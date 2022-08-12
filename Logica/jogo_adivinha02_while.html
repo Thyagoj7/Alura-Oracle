@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+var numeroPensado = Math.round(Math.random() * 10);
+
+
+
+var tentativas = 1;
+
+var cond =1;
+
+while(tentativas <= 3) {
+
+    var chute = parseInt(prompt("Digite seu chute!"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+        cond=0;
+        break;
+    } else {
+
+        mostra("Você ERROU!");
+    }
+
+    tentativas++;
+}
+
+var tipoNumero;
+
+if(cond == 1){
+if(numeroPensado%2 == 0){
+    tipoNumero = "Vou lhe dar uma dica o numero é um numero par!";
+
+}else{
+    tipoNumero = "Vou te dar uma dica o numero pensado é um numero ímpar!";
+}
+
+
+
+var chance=1;
+
+for(chance=1; chance<=3 ;chance++){
+
+    var ajuda = "";
+
+    if(chute < numeroPensado){
+        ajuda = "O numero pensando é maior que " + chute;
+
+     }else{
+
+        ajuda = "O numero pensando é menor que " + chute;
+     }
+
+     var chute = parseInt(prompt("Digite seu chute novamente!" + tipoNumero + ajuda));
+
+     
+
+     if(chute == numeroPensado){
+        mostra("Você ACERTOU, minha dica ajudou!O número pensado era " + numeroPensado);
+        break;
+     }else{
+        mostra("Você ERROU!");
+
+     }
+
+}
+
+}
+
+mostra("FIM");
+</script>

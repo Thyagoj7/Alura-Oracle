@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<h3>Álcool ou Gasolina?</h3>
+
+<h5>Para Gasolina Digite 1</h5>
+
+<h5>Para Alcool Digite 2</h5>
+
+
+ <input id="textinput" name="textinput" value="" type="text">
+  <button onclick="enviar()">Confirmar</button>
+
+<script>
+
+
+
+    
+    function enviar(){
+        var opcao = document.getElementById("textinput").value;
+        var tanque = 40;
+        var caminhoComGasolina = 480;
+        var consumoDeGasoilina = caminhoComGasolina/tanque;
+
+        var caminhaComAlcool = 300;
+        var consumoDeAlcool = caminhaComAlcool/tanque;
+
+        if(opcao == 1 ){
+            document.write("O consumo da gasolina é de " + consumoDeGasoilina + "Km/L");
+        }else if(opcao == 2 ){
+            document.write("O consumo de Álcool é " + Math.round(consumoDeAlcool) + "Km/L");
+        }
+
+    }
+
+    
+   
+
+    
+</script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    var numeroPensado = Math.round(Math.random() * 10);
+
+    var numeroEscolhido = parseInt(prompt("Digite o um valor"));
+
+    if(numeroEscolhido == numeroPensado) {
+
+        mostra("Voce acertou");
+    }else{
+
+            mostra("Voce errou o valor escolhido é " + numeroPensado);
+    }
+
+</script>

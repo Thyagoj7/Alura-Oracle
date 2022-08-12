@@ -1,0 +1,14 @@
+<meta = charset="UTF-8">
+<script>
+  var valor = prompt('Informe um número, pode ser com vírgula ou com ponto.');
+
+  // Independente do valor com vírgula ou com ponto sempre estou buscando por uma vírgula e substituindo por ponto.
+  var novoValor = parseFloat(valor.replace(',', '.'));
+
+  alert('Aqui está o novo valor: ' + novoValor);
+
+  alert(
+    'Estou agora convertendo o ponto para ficar no padrão brasileiro: ' +
+      novoValor.toString().replace('.', ',')
+  );
+</script>

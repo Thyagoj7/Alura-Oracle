@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+
+	var ano = 2022;
+	var flavioNasc = 1977;
+	var joaqNasc = 1996;
+	var barnNasc = 1976;
+
+
+	document.write("Atualmente qual a idade de vocês? ")
+	document.write("<br>");
+    document.write("Flávio tem " + (ano - flavioNasc) + " anos");
+    document.write("<br>");
+    document.write("Joaquim tem " + (ano - joaqNasc) + " anos");
+    document.write("<br>");
+    document.write("Barney tem " + (ano - barnNasc) + " anos");
+    //document.write("<br>");
+    document.write("<br>");
+    var media = ((ano - flavioNasc) + (ano - joaqNasc) + (ano - barnNasc)/3);
+    document.write("A média das idades no ano " + ano + " foi de " + Math.round(media) + "<br><br>");
+
+    ano = 2000;
+
+    media = ((ano - flavioNasc) + (ano - joaqNasc) + (ano - barnNasc)/3);
+
+    document.write("No ano 2000 quantos anos vocês tinham?");
+    document.write("<br>");
+    document.write("Flávio tinha " + (ano - flavioNasc) + " anos");
+    document.write("<br>");
+    document.write("Joaquim tinha " + (ano - joaqNasc) + " anos");
+    document.write("<br>");
+    document.write("Barney tinha " + (ano - barnNasc) + " anos");
+    document.write("<br>");
+    document.write("A média das idades no ano " + ano + " foi de " + media);
+
+
+
+

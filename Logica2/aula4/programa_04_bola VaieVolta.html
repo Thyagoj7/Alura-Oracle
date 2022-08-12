@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Codigo para fazeer uma bolinha andar pelo eixo x para a direita-->
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() { // limpar a bola anterior
+    pincel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 20;
+    var z = 1;
+
+    function atualizaTela() { // Esta função vai chamar o desenhacirculo que vai desenhar a bola e a limpatela que vai limpar a bola passada.
+    if(x < 580 && z==1 ){
+    limpaTela();
+    desenhaCirculo(x, 20, 10);
+    x++;
+        }else if(x >= 20 ){
+            z=0;
+            limpaTela();
+            desenhaCirculo(x, 20, 10);
+            x--;
+        }else{
+            z=1;
+        }
+    }
+    
+    
+
+    
+
+        setInterval(atualizaTela, 10); // aqui vai chamar a função apra criar a bola e limpar e vai atualizar a tela em milissegundos
+
+   
+    
+</script>
+    
+</body>
+</html>
